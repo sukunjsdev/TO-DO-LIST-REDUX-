@@ -14,9 +14,8 @@ import { useEffect, useState } from "react";
 export const Index = () => {
   const dispatch = useDispatch();
   const isToggled = useSelector((state) => state.isToggled);
-  // const tasks = useSelector((state) => state.tasks);
-  const { tasks, search } = useSelector((state) => state);
-
+  const tasks = useSelector((state) => state.tasks);
+  const search = useSelector((state) => state.search);
   const showAdd = useSelector((state) => state.showAdd);
 
   const [filter, setFilter] = useState("all");

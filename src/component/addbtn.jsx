@@ -1,25 +1,18 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./add.css";
 import { useDispatch, useSelector } from "react-redux";
 
 export const AddBtn = () => {
-  const [task, setTask] = useState("");
   const dispatch = useDispatch();
   const tasks = useSelector((state) => state.tasks);
   const editIndex = useSelector((state) => state.editIndex);
   const isEditing = editIndex !== null;
 
-  useEffect(() => {
-    if (isEditing) {
-      setTask(tasks[editIndex].text);
-    } else {
-      setTask("");
-    }
-  }, [editIndex, tasks, isEditing]);
+  const [task, setTask] = useState(
+    isEditing ? tasks[editIndex]?.text ?? "" : "",
+  );
 
   const handleClose = () => {
-    setTask("");
-
     dispatch({
       type: "CLOSE_ADD",
     });
@@ -46,7 +39,6 @@ export const AddBtn = () => {
       });
     }
 
-    setTask("");
   };
 
   return (
