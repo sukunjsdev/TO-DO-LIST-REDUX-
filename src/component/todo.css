@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.full-page {
+  width: 100vw;
+  height: 100vh;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  width: 95vw;
+}
+.header-btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#header-search {
+  width: 70vw;
+  height: 2.3rem;
+  border-radius: 5px;
+  border: 1px solid #6c63ff;
+  padding-left: 5px;
+  align-items: center;
+}
+.search {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+body.dark #header-search {
+  background-color: #252525;
+  border: 1px solid white;
+  color: white;
+}
+.mirror-header {
+  position: absolute;
+  right: 10px;
+}
+
+.select-btn-header {
+  width: 60%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #6c63ff;
+  color: white;
+}
+.select-btn-header option {
+  background-color: white;
+  color: #6c63ff;
+}
+.moon-header {
+  background-color: #6c63ff;
+  width: 35px;
+  height: 100%;
+  border-radius: 5px;
+  padding: 5px;
+}
+.header-right-btn {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+}
+.unorder-list {
+  width: 80%;
+  height: 100%;
+  margin-top: 3rem;
+  gap: 1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+}
+.data {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.addbtn {
+  background-color: #6c63ff;
+  color: white;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 5rem;
+  display: flex;
+  padding: 5px;
+  bottom: 2rem;
+  border-radius: 5px;
+}
+body.dark {
+  color: white;
+  background-color: #252525;
+}
+.no-result {
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.no-result img{
+  width:15rem;
+  height:15rem;
+}
