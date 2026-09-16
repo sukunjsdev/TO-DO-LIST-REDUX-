@@ -3,5 +3,5 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/TO-DO-LIST-REDUX-/",
+  base: "https://github.com/sukunjsdev/TO-DO-LIST-REDUX-/settings/pages",
 });
